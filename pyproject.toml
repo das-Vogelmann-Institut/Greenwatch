@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "Greenwatch"
+version = "0.1.0"
+description = "A small utility to measure how much C02 has my bandwidth used"
+authors = ["Martin Kodada <martinkodada@icloud.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+psutil = "^5.9.0"
+notify-py = "^0.3.3"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
