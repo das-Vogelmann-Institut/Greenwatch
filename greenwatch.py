@@ -19,7 +19,7 @@ def main():
         if old_value:
             new_converted_value = send_stat(new_value - old_value)
             converted_value = converted_value + new_converted_value
-            if converted_value > 8 : # I Gbit = 0.125 GB
+            if converted_value > 1 : # I Gbit = 0.125 GB
                 # source for count https://www.fastcompany.com/90171268/internet_impact_visualized
                 print("gotcha!!")
                 total_kg_usage = total_kg_usage + 1
@@ -35,11 +35,11 @@ def main():
         old_value = new_value
         time.sleep(1)
 
-def convert_to_gbit(value):
-    return value/1024./1024./1024.*8
+def convert_to_gbyte(value):
+    return value/1024./1024./1024.
 
 def send_stat(value):
-    converted_value =  convert_to_gbit(value)
+    converted_value =  convert_to_gbyte(value)
     print(format(converted_value,".3f") + " gbit used")
     return converted_value
 
